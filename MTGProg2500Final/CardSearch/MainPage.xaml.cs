@@ -26,5 +26,10 @@ namespace CardSearch
         {
             this.InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SetsPage));
+        }
     }
 }
