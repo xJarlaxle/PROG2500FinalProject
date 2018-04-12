@@ -24,7 +24,7 @@ namespace CardLib
         {
             get
             {
-                if (onlineOnly.HasValue) return "False";
+                if (!onlineOnly.HasValue) return "False";
                 return (onlineOnly.Value) ? "True" : "False";
             }
         }
