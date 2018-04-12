@@ -17,9 +17,17 @@ namespace CardLib
         public string mkm_name { get; set; }
         public string releaseDate { get; set; }
         public string magicCardsInfoCode { get; set; }
-        public string gathererCode { get; set; }
+        public string gathererCode { get; set; } = "<None>";
         public string oldCode { get; set; }
         public bool? onlineOnly { get; set; }
-        public string block { get; set; }
+        public string onlineOnlyString
+        {
+            get
+            {
+                if (onlineOnly.HasValue) return "False";
+                return (onlineOnly.Value) ? "True" : "False";
+            }
+        }
+        public string block { get; set; } = "<None>";
     }
 }
