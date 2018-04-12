@@ -64,44 +64,40 @@
             <ListView Grid.Row="1" ItemTemplate="{StaticResource SetModelTemplate}" ItemsSource="{Binding viewSetList, Mode=TwoWay}" SelectedItem="{Binding setModel, Mode=TwoWay}"></ListView>
             
         </Grid>
-        <StackPanel Grid.Row="0" Grid.Column="1" Margin="10" Padding="20" BorderBrush="Black" BorderThickness="2">
-            <Button x:Name="MainPage" Content="Card Search" Click="MainPage_Click"></Button>
-
-            <Grid Margin="100,100,0,0">
+        <Grid Grid.Row="0" Grid.Column="1" Margin="10" Padding="20" BorderBrush="Black" BorderThickness="2">
+            <Grid >
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="AUTO"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <StackPanel Grid.Column="0">
-                    <TextBlock  HorizontalAlignment="Left"  Text="Name: " TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBlock  HorizontalAlignment="Left"  Text="Block: " TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBlock  HorizontalAlignment="Left"  Text="Code: " TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBlock  HorizontalAlignment="Left"  Text="GatherCode: " TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBlock  HorizontalAlignment="Left"  Text="Release Date: " TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBlock  HorizontalAlignment="Left"  Text="Border: " TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBlock  HorizontalAlignment="Left"  Text="Online Only: " TextWrapping="Wrap" VerticalAlignment="Top"/>
-                </StackPanel>
-                <StackPanel Grid.Column="1" Margin="20,0,0,0">
-                    <TextBlock x:Name="Name"  HorizontalAlignment="Left" Text="{Binding setModel.name, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBlock x:Name="Block"  HorizontalAlignment="Left"  Text="{Binding setModel.block, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBlock x:Name="Code"  HorizontalAlignment="Left" Text="{Binding setModel.code, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBlock x:Name="GatherCode"  HorizontalAlignment="Left" Text="{Binding setModel.gathererCode, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBlock x:Name="ReleaseDate"  HorizontalAlignment="Left" Text="{Binding setModel.releaseDate, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBlock x:Name="Border" HorizontalAlignment="Left" Text="{Binding setModel.border, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                    <TextBlock x:Name="OnlineOnly" HorizontalAlignment="Left" Text="{Binding setModel.onlineOnlyString, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                </StackPanel>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock  HorizontalAlignment="Left" Grid.Column="0" Grid.Row="0" FontSize="20" Text="Name: " VerticalAlignment="Top"/>
+                <TextBlock  HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1" FontSize="20" Text="Block: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock  HorizontalAlignment="Left" Grid.Column="0" Grid.Row="2" FontSize="20" Text="Code: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock  HorizontalAlignment="Left" Grid.Column="0" Grid.Row="3" FontSize="20" Text="GatherCode: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock  HorizontalAlignment="Left" Grid.Column="0" Grid.Row="4" FontSize="20" Text="Release Date: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock  HorizontalAlignment="Left" Grid.Column="0" Grid.Row="5" FontSize="20" Text="Border: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock  HorizontalAlignment="Left" Grid.Column="0" Grid.Row="6" FontSize="20" Text="Online Only: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+
+                <TextBlock x:Name="Name" Grid.Column="1" Grid.Row="0" FontSize="20" HorizontalAlignment="Left" Text="{Binding setModel.name, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock x:Name="Block" Grid.Column="1" Grid.Row="1" FontSize="20" HorizontalAlignment="Left"  Text="{Binding setModel.block, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock x:Name="Code" Grid.Column="1" Grid.Row="2" FontSize="20" HorizontalAlignment="Left" Text="{Binding setModel.code, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock x:Name="GatherCode" Grid.Column="1" Grid.Row="3" FontSize="20" HorizontalAlignment="Left" Text="{Binding setModel.gathererCode, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock x:Name="ReleaseDate" Grid.Column="1" Grid.Row="4" FontSize="20" HorizontalAlignment="Left" Text="{Binding setModel.releaseDate, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock x:Name="Border" Grid.Column="1" Grid.Row="5" FontSize="20" HorizontalAlignment="Left" Text="{Binding setModel.border, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock x:Name="OnlineOnly" Grid.Column="1" Grid.Row="6" FontSize="20"  HorizontalAlignment="Left" Text="{Binding setModel.onlineOnlyString, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
             </Grid>
-        </StackPanel>
-
-
+        </Grid>
         
-
-      
-
-        
-        
-
-
         <StackPanel Grid.Row="0" Grid.Column="2" Margin="10" Padding="20" BorderBrush="Black" BorderThickness="2">
 
         </StackPanel>
