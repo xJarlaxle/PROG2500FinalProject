@@ -8,19 +8,67 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="483*"/>
-            <ColumnDefinition Width="514*"/>
-            <ColumnDefinition Width="503*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="53*"/>
-            <RowDefinition Height="947*"/>
+            <RowDefinition Height="700"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBox Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="33,10,-103,-42" Grid.RowSpan="2" Text="TextBox" VerticalAlignment="Top" Width="150"/>
-        <Button Grid.ColumnSpan="3" Content="Search" HorizontalAlignment="Left" Margin="207,9,-282,-48" Grid.RowSpan="2" VerticalAlignment="Top">
-            
-        </Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="10" Padding="20" BorderBrush="Black" BorderThickness="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBox Grid.Row="0" Grid.Column="0"></TextBox>
+                <Button Margin="20, 0, 0, 0" Grid.Row="0" Grid.Column="1" Content="Search"></Button>
+            </Grid>
+            <ListView></ListView>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1" Margin="10" Padding="20" BorderBrush="Black" BorderThickness="2">
+            <Button x:Name="MainPage" Content="Card Search" Click="MainPage_Click"></Button>
+        </StackPanel>
 
+        <StackPanel>
+            <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="569,126,-631,-146" Text="Name: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="569,150,-631,-146" Text="Name: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="569,174,-631,-146" Text="Name: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="569,198,-631,-146" Text="Name: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="569,222,-631,-146" Text="Name: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="569,246,-631,-146" Text="Name: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="569,270,-631,-146" Text="Name: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="569,294,-631,-146" Text="Name: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="569,318,-631,-146" Text="Name: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="569,342,-631,-146" Text="Name: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="569,366,-631,-146" Text="Name: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="0" Grid.Column="2" Margin="10" Padding="20" BorderBrush="Black" BorderThickness="2">
+
+        </StackPanel>
+        
     </Grid>
 </Page>
