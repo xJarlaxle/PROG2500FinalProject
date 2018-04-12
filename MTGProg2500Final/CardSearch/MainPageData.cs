@@ -51,18 +51,19 @@ namespace CardSearch
             }
         }
 
-        public void OnNavigatedTo(object param)
-        {
-            if (param.GetType() != ViewCardList.GetType()) return;
-            var list = (ObservableCollection<CardModel>)param;
+        public void OnNavigatedTo(object param){
 
-            ViewCardList.Clear();
-            cardList.Clear();
+            if (param != null) {
+                if (param.GetType() != ViewCardList.GetType()) return;
+                var list = (ObservableCollection<CardModel>)param;
 
-            foreach(var card in list)
-            {
-                cardList.Add(card);
-                ViewCardList.Add(card);
+                ViewCardList.Clear();
+                cardList.Clear();
+
+                foreach (var card in list) {
+                    cardList.Add(card);
+                    ViewCardList.Add(card);
+                }
             }
 
         }

@@ -32,7 +32,7 @@
     <Page.Resources>
         <DataTemplate x:Key="CardModelTemplate">
             <StackPanel Orientation="Horizontal">
-                <TextBlock FontSize="18"  Text="{Binding name, Mode=OneWay}"  FontWeight="Bold"></TextBlock>
+                <TextBlock FontSize="20"  Text="{Binding name, Mode=OneWay}"  FontWeight="Bold"></TextBlock>
             </StackPanel>
         </DataTemplate>
     </Page.Resources>
@@ -90,26 +90,26 @@
                     <ColumnDefinition Width="50"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Grid.Row="0" FontSize="18" Text="Name: " FontWeight="Bold"></TextBlock>
-                <TextBlock Grid.Column="2" Grid.Row="0" TextWrapping="Wrap" FontSize="18" Text="{Binding Card.name}" FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="0" FontSize="20" Text="Name: " FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Column="2" Grid.Row="0" TextWrapping="Wrap" FontSize="20" Text="{Binding Card.name}" FontWeight="Bold"></TextBlock>
 
-                <TextBlock Grid.Column="0" Grid.Row="1" FontSize="18" Text="Multiverse ID: " FontWeight="Bold"></TextBlock>
-                <TextBlock Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" FontSize="18" Text="{Binding Card.multiverseid}" FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="1" FontSize="20" Text="Multiverse ID: " FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" FontSize="20" Text="{Binding Card.multiverseid}" FontWeight="Bold"></TextBlock>
 
-                <TextBlock Grid.Column="0" Grid.Row="2"  FontSize="18" Text="Artist: " FontWeight="Bold"></TextBlock>
-                <TextBlock Grid.Column="2" Grid.Row="2" TextWrapping="Wrap" FontSize="18" Text="{Binding Card.artist}" FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="2"  FontSize="20" Text="Artist: " FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Column="2" Grid.Row="2" TextWrapping="Wrap" FontSize="20" Text="{Binding Card.artist}" FontWeight="Bold"></TextBlock>
 
-                <TextBlock Grid.Column="0" Grid.Row="3" FontSize="18" Text="Layout: " FontWeight="Bold"></TextBlock>
-                <TextBlock Grid.Column="2" Grid.Row="3" TextWrapping="Wrap" FontSize="18" Text="{Binding Card.layout}" FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="3" FontSize="20" Text="Layout: " FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Column="2" Grid.Row="3" TextWrapping="Wrap" FontSize="20" Text="{Binding Card.layout}" FontWeight="Bold"></TextBlock>
 
-                <TextBlock Grid.Column="0" Grid.Row="4" FontSize="18" Text="Power: " FontWeight="Bold"></TextBlock>
-                <TextBlock Grid.Column="2" Grid.Row="4" TextWrapping="Wrap" FontSize="18" Text="{Binding Card.power}" FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="4" FontSize="20" Text="Power: " FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Column="2" Grid.Row="4" TextWrapping="Wrap" FontSize="20" Text="{Binding Card.power}" FontWeight="Bold"></TextBlock>
 
-                <TextBlock Grid.Column="0" Grid.Row="5" FontSize="18" Text="Mana Cost: " FontWeight="Bold"></TextBlock>
-                <TextBlock Grid.Column="2" Grid.Row="5" TextWrapping="Wrap" FontSize="18" Text="{Binding Card.manaCost}" FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="5" FontSize="20" Text="Mana Cost: " FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Column="2" Grid.Row="5" TextWrapping="Wrap" FontSize="20" Text="{Binding Card.manaCost}" FontWeight="Bold"></TextBlock>
 
-                <TextBlock Grid.Column="0" Grid.Row="6" FontSize="18" Text="Rarity: " FontWeight="Bold"></TextBlock>
-                <TextBlock Grid.Column="2" Grid.Row="6" TextWrapping="Wrap" FontSize="18" Text="{Binding Card.rarity}" FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="6" FontSize="20" Text="Rarity: " FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Column="2" Grid.Row="6" TextWrapping="Wrap" FontSize="20" Text="{Binding Card.rarity}" FontWeight="Bold"></TextBlock>
             </Grid>
         </Grid>
     </Grid>
