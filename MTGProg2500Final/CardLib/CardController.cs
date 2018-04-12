@@ -29,7 +29,7 @@ namespace CardLib
             return setList;
         }
 
-        public async Task<List<CardModel>> GetBooster(string setCode)
+        public async Task<List<CardModel>> GetBoosterAsync(string setCode)
         {
             var escapedSetCode = Uri.EscapeDataString(setCode);
             var url = String.Format("{0}sets/{1}/booster", _baseUrl, escapedSetCode);

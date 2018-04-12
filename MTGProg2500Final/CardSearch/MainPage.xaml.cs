@@ -39,5 +39,12 @@ namespace CardSearch
         private void About_Click(object sender, RoutedEventArgs e) {
             this.Frame.Navigate(typeof(AboutPage));
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            (this.DataContext as MainPageData).OnNavigatedTo(e.Parameter);
+
+        }
     }
 }

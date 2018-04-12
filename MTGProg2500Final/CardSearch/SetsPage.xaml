@@ -37,11 +37,14 @@
         <DataTemplate x:Key="SetModelTemplate">
             <TextBlock Text="{Binding name}"></TextBlock>
         </DataTemplate>
+        <DataTemplate x:Key="CardModelTemplate">
+            <TextBlock Text="{Binding name}" />
+        </DataTemplate>
     </Page.Resources>
-    
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="700"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -62,7 +65,7 @@
                 <Button Margin="20, 0, 0, 0" Grid.Row="0" Grid.Column="1" Content="Search" Command="{Binding _ssbc, Mode=TwoWay}"></Button>
             </Grid>
             <ListView Grid.Row="1" ItemTemplate="{StaticResource SetModelTemplate}" ItemsSource="{Binding viewSetList, Mode=TwoWay}" SelectedItem="{Binding setModel, Mode=TwoWay}"></ListView>
-            
+
         </Grid>
         <Grid Grid.Row="0" Grid.Column="1" Margin="10" Padding="20" BorderBrush="Black" BorderThickness="2">
             <Grid >
@@ -70,7 +73,7 @@
                     <ColumnDefinition Width="AUTO"/>
                     <ColumnDefinition Width="15"/>
                     <ColumnDefinition Width="*"/>
-                    
+
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -99,10 +102,16 @@
                 <TextBlock x:Name="OnlineOnly" Grid.Column="2" Grid.Row="6" FontSize="20"  HorizontalAlignment="Left" Text="{Binding setModel.onlineOnlyString, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top"/>
             </Grid>
         </Grid>
-        
-        <StackPanel Grid.Row="0" Grid.Column="2" Margin="10" Padding="20" BorderBrush="Black" BorderThickness="2">
 
-        </StackPanel>
-        
+        <Grid Grid.Column="2"  Margin="10" Padding="20" BorderBrush="Black" BorderThickness="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button x:Name="GenerateBooster" Content="Generate Booster" Command="{Binding gbc, Mode=TwoWay}" />
+            <ListView Name="boosterPackListView" Grid.Row="1" ItemsSource="{Binding viewCardList, Mode=TwoWay}" ItemTemplate="{StaticResource CardModelTemplate}" />
+            <Button Grid.Row="2" Content="View in Card Search" Click="ViewBooster_Click" IsEnabled="{Binding CanNavToCardSearch}" />
+        </Grid>
     </Grid>
 </Page>

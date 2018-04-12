@@ -38,5 +38,10 @@ namespace CardSearch
         private void CardSearch_Click(object sender, RoutedEventArgs e) {
             this.Frame.Navigate(typeof(MainPage));
         }
+
+        private void ViewBooster_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage), boosterPackListView.ItemsSource);
+        }
     }
 }
