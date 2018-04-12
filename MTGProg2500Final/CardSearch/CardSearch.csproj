@@ -101,7 +101,11 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainPageData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchCommand.cs" />
+    <Compile Include="SetPageData.cs" />
+    <Compile Include="SetSearchButtonClick.cs" />
     <Compile Include="SetsPage.xaml.cs">
       <DependentUpon>SetsPage.xaml</DependentUpon>
     </Compile>
@@ -144,6 +148,12 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.8</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CardLib\CardLib.csproj">
+      <Project>{83183DAF-0C40-43B2-90A7-0FD611D992C7}</Project>
+      <Name>CardLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
