@@ -7,6 +7,29 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.TopAppBar>
+        <CommandBar >
+            <AppBarButton x:Name="CardSearch" Label="Card Search" IsEnabled="False">
+                <AppBarButton.Content>
+                    <TextBlock Text="Card Search"/>
+                </AppBarButton.Content>
+            </AppBarButton>
+            <AppBarSeparator/>
+            <AppBarButton x:Name="SetSearch"  Label="Set Search" Click="SetSearch_Click">
+                <AppBarButton.Content>
+                    <TextBlock Text="Set Search" />
+                </AppBarButton.Content>
+            </AppBarButton>
+            <AppBarSeparator/>
+            <AppBarButton x:Name="About" Label="About" Click="About_Click">
+                <AppBarButton.Content>
+                    <TextBlock Text="About"/>
+                </AppBarButton.Content>
+            </AppBarButton>
+        </CommandBar>
+    </Page.TopAppBar>
+    
+    
     <Page.Resources>
         <DataTemplate x:Key="CardModelTemplate">
             <StackPanel Orientation="Horizontal">

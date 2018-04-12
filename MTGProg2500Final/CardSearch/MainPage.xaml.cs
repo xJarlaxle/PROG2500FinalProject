@@ -31,5 +31,13 @@ namespace CardSearch
         {
             this.Frame.Navigate(typeof(SetsPage));
         }
+
+        private void SetSearch_Click(object sender, RoutedEventArgs e) {
+            this.Frame.Navigate(typeof(SetsPage));
+        }
+
+        private void About_Click(object sender, RoutedEventArgs e) {
+            this.Frame.Navigate(typeof(AboutPage));
+        }
     }
 }
