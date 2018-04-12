@@ -30,18 +30,25 @@
     </Page.TopAppBar>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <StackPanel Padding="10,0,0,10" Grid.Row="0">
-            <TextBlock Text="Team Members:" FontSize="30" FontWeight="Bold" />
-            <TextBlock Text="Brian Willett" FontSize="30" />
-            <TextBlock Text="Jonathon Williamson" FontSize="30" />
-            <TextBlock Text="Kyle Bulger" FontSize="30" />
-        </StackPanel>
-        <Border BorderBrush="Black" BorderThickness="0,1,0,0" Grid.Row="1" />
-        <TextBlock Grid.Row="2" Text="Simple program that uses magicthegathering.io to search for cards and sets, and generate booster packs." FontSize="30" TextWrapping="WrapWholeWords" />
+        <Rectangle>
+            <Rectangle.Fill>
+                <ImageBrush  ImageSource="Assets/picEdited.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackPanel Padding="10,0,0,10" Grid.Row="0">
+                <TextBlock Text="Team Members:" FontSize="30" FontWeight="Bold" />
+                <TextBlock Text="Brian Willett" FontSize="30" />
+                <TextBlock Text="Jonathon Williamson" FontSize="30" />
+                <TextBlock Text="Kyle Bulger" FontSize="30" />
+            </StackPanel>
+            <Border BorderBrush="Black" BorderThickness="0,1,0,0" Grid.Row="1" />
+            <TextBlock Grid.Row="2" Text="Simple program that uses magicthegathering.io to search for cards and sets, and generate booster packs." FontSize="30" TextWrapping="WrapWholeWords" />
+        </Grid>
     </Grid>
 </Page>
