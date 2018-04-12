@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CardLib;
 
 namespace CardSearch
 {
@@ -11,25 +13,35 @@ namespace CardSearch
 
         public event PropertyChangedEventHandler PropertyChanged;
         public SetSearchButtonClick _ssbc { get; }
-        public CardLib.CardController controller;
+        public CardController controller;
 
-        public string Name { get; set; } = "This";
-        public string Block { get; set; } = "is";
-        public string Code { get; set; } = "a";
-        public string GatherCode { get; set; } = "test";
-        public string OldCode { get; set; } = "to";
-        public string Rarity { get; set; } = "see";
-        public string ReleaseDate { get; set; } = "if";
-        public string Border { get; set; } = "the";
-        public string Expansion { get; set; } = "text";
-        public string OnlineOnly { get; set; } = "displays";
+        public ObservableCollection<SetModel> viewSetList { get; set; }
+        public List<SetModel> setList;
+        public SetModel setModel {
+            get => _setModel;
+            set {
+                _setModel = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(setModel)));
+            }
+        }
+        public string searchText { get; set; } = "";
+        
 
-        
-        
+        private SetModel _setModel;
+
+
+        public void refreshSets() {
+            viewSetList.Clear();
+            foreach(var set in setList){
+                viewSetList.Add(set);
+            }
+        }
 
         public SetPageData() {
+            viewSetList = new ObservableCollection<SetModel>();
+            setList = new List<SetModel>();
             _ssbc = new SetSearchButtonClick(this);
-             controller = new CardLib.CardController();
+             controller = new CardController();
 
         }
 

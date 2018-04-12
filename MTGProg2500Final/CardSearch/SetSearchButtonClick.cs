@@ -26,7 +26,8 @@ namespace CardSearch
 
         public async void Execute(object parameter) {
             
-            var result = await _spd.controller.GetSetListAsync();
+           _spd.setList = await _spd.controller.GetSetListAsync(_spd.searchText);
+            _spd.refreshSets();
         }
 
 
