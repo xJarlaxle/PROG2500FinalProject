@@ -11,6 +11,7 @@ namespace CardSearch
 {
     public class MainPageData : INotifyPropertyChanged
     {
+        //Variable Declarations
         private CardModel card;
         public CardModel Card
         {
@@ -33,6 +34,9 @@ namespace CardSearch
 
         public SearchCommand cmd_search { get; set; }
 
+        /// <summary>
+        /// Constructor for the class
+        /// </summary>
         public MainPageData()
         {
             controller = new CardController();
@@ -41,6 +45,9 @@ namespace CardSearch
             cmd_search = new SearchCommand(this);
         }
 
+        /// <summary>
+        /// Refreshes the card list on the main page
+        /// </summary>
         public void RefreshCards()
         {
             ViewCardList.Clear();
@@ -51,6 +58,10 @@ namespace CardSearch
             }
         }
 
+        /// <summary>
+        /// Handles the booster pack display from the sets page to the main page
+        /// </summary>
+        /// <param name="param"></param>
         public void OnNavigatedTo(object param){
 
             if (param != null) {

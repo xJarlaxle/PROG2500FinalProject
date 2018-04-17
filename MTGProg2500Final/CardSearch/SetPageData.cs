@@ -11,6 +11,7 @@ namespace CardSearch
 {
     public class SetPageData : INotifyPropertyChanged {
 
+        //Variable Declarations
         public event PropertyChangedEventHandler PropertyChanged;
         public SetSearchButtonClick _ssbc { get; }
         public GenerateBoosterCommand gbc { get; }
@@ -41,7 +42,9 @@ namespace CardSearch
             }
         }
 
-
+        /// <summary>
+        /// Refreshes the set list display
+        /// </summary>
         public void refreshSets() {
             viewSetList.Clear();
             foreach(var set in setList){
@@ -49,6 +52,10 @@ namespace CardSearch
             }
         }
 
+
+        /// <summary>
+        /// Refreshes the card list display
+        /// </summary>
         public void refreshCards()
         {
             viewCardList.Clear();
@@ -59,6 +66,9 @@ namespace CardSearch
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(CanNavToCardSearch)));
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public SetPageData() {
             viewSetList = new ObservableCollection<SetModel>();
             setList = new List<SetModel>();

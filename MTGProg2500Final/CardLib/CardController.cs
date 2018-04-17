@@ -11,6 +11,12 @@ namespace CardLib
     public class CardController
     {
         private string _baseUrl = "https://api.magicthegathering.io/v1/";
+
+        /// <summary>
+        /// Gets the card list using the API
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public async Task<List<CardModel>> GetCardListAsync(string name = "")
         {
             var escapedName = Uri.EscapeDataString(name);
@@ -20,6 +26,11 @@ namespace CardLib
             return cardList;
         }
 
+        /// <summary>
+        /// Gets the set list using the API
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public async Task<List<SetModel>> GetSetListAsync(string name = "")
         {
             var escapedName = Uri.EscapeDataString(name);
@@ -29,6 +40,11 @@ namespace CardLib
             return setList;
         }
 
+        /// <summary>
+        /// Gets the booster pack using the API
+        /// </summary>
+        /// <param name="setCode"></param>
+        /// <returns></returns>
         public async Task<List<CardModel>> GetBoosterAsync(string setCode)
         {
             var escapedSetCode = Uri.EscapeDataString(setCode);
