@@ -13,19 +13,19 @@
 
     <Page.TopAppBar>
         <CommandBar>
-            <AppBarButton x:Name="CardSearch" Label="Card Search" Click="CardSearch_Click">
+            <AppBarButton x:Name="CardSearch" ToolTipService.ToolTip="Search for a specific card" Label="Card Search" Click="CardSearch_Click">
                 <AppBarButton.Content>
                     <TextBlock Text="Card Search"/>
                 </AppBarButton.Content>
             </AppBarButton>
             <AppBarSeparator/>
-            <AppBarButton x:Name="SetSearch" Label="Set Search" IsEnabled="False">
+            <AppBarButton x:Name="SetSearch" ToolTipService.ToolTip="Search for a specific set" Label="Set Search" IsEnabled="False">
                 <AppBarButton.Content>
                     <TextBlock Text="Set Search"/>
                 </AppBarButton.Content>
             </AppBarButton>
             <AppBarSeparator/>
-            <AppBarButton x:Name="About" Label="About" Click="About_Click">
+            <AppBarButton x:Name="About" ToolTipService.ToolTip="About us page" Label="About" Click="About_Click">
                 <AppBarButton.Content>
                     <TextBlock Text="About"/>
                 </AppBarButton.Content>
@@ -68,7 +68,7 @@
                         <ColumnDefinition Width="100"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <TextBox Grid.Row="0" Grid.Column="0" Text="{Binding searchText, Mode=TwoWay}"></TextBox>
-                    <Button Margin="20, 0, 0, 0" Grid.Row="0" Grid.Column="1" Content="Search" Command="{Binding _ssbc, Mode=TwoWay}"></Button>
+                    <Button Background="Gray" Margin="20, 0, 0, 0" Grid.Row="0" Grid.Column="1" Content="Search" Command="{Binding _ssbc, Mode=TwoWay}"></Button>
                 </Grid>
                 <ListView Grid.Row="1" ItemTemplate="{StaticResource SetModelTemplate}" ItemsSource="{Binding viewSetList, Mode=TwoWay}" SelectedItem="{Binding setModel, Mode=TwoWay}"></ListView>
 
@@ -115,9 +115,9 @@
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Button x:Name="GenerateBooster" Content="Generate Booster" Command="{Binding gbc, Mode=TwoWay}" />
+                <Button Background="Gray" x:Name="GenerateBooster" Content="Generate Booster" Command="{Binding gbc, Mode=TwoWay}" />
                 <ListView Name="boosterPackListView" Grid.Row="1" ItemsSource="{Binding viewCardList, Mode=TwoWay}" ItemTemplate="{StaticResource CardModelTemplate}" />
-                <Button Grid.Row="2" Content="View in Card Search" Click="ViewBooster_Click" IsEnabled="{Binding CanNavToCardSearch}" />
+                <Button Background="Gray" Grid.Row="2" Content="View in Card Search" Click="ViewBooster_Click" IsEnabled="{Binding CanNavToCardSearch}" />
             </Grid>
         </Grid>
     </Grid>

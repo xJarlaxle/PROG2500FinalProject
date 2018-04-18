@@ -9,19 +9,19 @@
 
     <Page.TopAppBar>
         <CommandBar >
-            <AppBarButton x:Name="CardSearch" Label="Card Search" IsEnabled="False">
+            <AppBarButton x:Name="CardSearch" ToolTipService.ToolTip="Search for a specific card" Label="Card Search" IsEnabled="False">
                 <AppBarButton.Content>
                     <TextBlock Text="Card Search"/>
                 </AppBarButton.Content>
             </AppBarButton>
             <AppBarSeparator/>
-            <AppBarButton x:Name="SetSearch"  Label="Set Search" Click="SetSearch_Click">
+            <AppBarButton x:Name="SetSearch" ToolTipService.ToolTip="Search for a specific set"  Label="Set Search" Click="SetSearch_Click">
                 <AppBarButton.Content>
                     <TextBlock Text="Set Search" />
                 </AppBarButton.Content>
             </AppBarButton>
             <AppBarSeparator/>
-            <AppBarButton x:Name="About" Label="About" Click="About_Click">
+            <AppBarButton x:Name="About" ToolTipService.ToolTip="About us page" Label="About" Click="About_Click">
                 <AppBarButton.Content>
                     <TextBlock Text="About"/>
                 </AppBarButton.Content>
@@ -67,7 +67,7 @@
                         <ColumnDefinition Width="100"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <TextBox Grid.Row="0" Grid.Column="0" PlaceholderText="Search by name" Text="{Binding Text, Mode=TwoWay}"></TextBox>
-                    <Button Margin="20, 0, 0, 0" Grid.Row="0" Grid.Column="1" Content="Search" Command="{Binding cmd_search}"></Button>
+                    <Button Background="Gray" Margin="20, 0, 0, 0" Grid.Row="0" Grid.Column="1" Content="Search" Command="{Binding cmd_search}"></Button>
                 </Grid>
                 <ListView  Margin="0. 10. 0, 10" Grid.Row="1" Height="700" SelectedItem="{Binding Card, Mode=TwoWay}" ItemTemplate="{StaticResource CardModelTemplate}" ItemsSource="{Binding ViewCardList}"></ListView>
             </Grid>
